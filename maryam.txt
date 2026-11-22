@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art by Maryam | Handmade with Love</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffafc;
+    color: #39303b;
+}
+
+header {
+    background: #f2e8f2;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #765477;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #493b4c;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #a46ca4;
+}
+
+.hero {
+    min-height: 570px;
+    background: linear-gradient(
+        rgba(42,25,43,.35),
+        rgba(42,25,43,.35)
+    ),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1800&q=85');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #8c668e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #634665;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #765477;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #817681;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(80,50,80,.09);
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    color: #765477;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about {
+    background: #f5edf5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.about img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about h2 {
+    font-size: 35px;
+    color: #765477;
+    margin-bottom: 20px;
+}
+
+.about p {
+    line-height: 1.9;
+    color: #665c67;
+    margin-bottom: 20px;
+}
+
+.custom {
+    text-align: center;
+    background: #fff5fa;
+}
+
+.custom h2 {
+    color: #765477;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.custom p {
+    margin-bottom: 25px;
+    color: #756a76;
+    line-height: 1.8;
+}
+
+footer {
+    background: #453649;
+    color: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #e5dce7;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    z-index: 200;
+    box-shadow: 0 3px 12px #999;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about img {
+        height: 300px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Art by Maryam</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Custom Orders</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Little Things, Made with Love.</h1>
+
+        <p>
+            Discover thoughtfully handmade creations,
+            personalised gifts and beautiful pieces
+            crafted to make every moment special.
+        </p>
+
+        <a href="#collection" class="btn">
+            Explore Collection
+        </a>
+    </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section id="collection">
+
+    <div class="section-title">
+        <h2>Our Collection</h2>
+        <p>Handmade creations, designed with creativity and love.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=700&q=80" alt="Handmade flower bouquet">
+
+            <div class="product-info">
+                <h3>Handmade Bouquets</h3>
+                <p>Unique floral creations for your special moments.</p>
+
+                <button class="btn" onclick="orderProduct('Handmade Bouquets')">
+                    Order Now
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Fashion accessories">
+
+            <div class="product-info">
+                <h3>Wearable Creations</h3>
+                <p>Creative handmade accessories and unique designs.</p>
+
+                <button class="btn" onclick="orderProduct('Wearable Creations')">
+                    Order Now
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=700&q=80" alt="Gift arrangement">
+
+            <div class="product-info">
+                <h3>Personalised Gifts</h3>
+                <p>Thoughtful gifts made to create lasting memories.</p>
+
+                <button class="btn" onclick="orderProduct('Personalised Gifts')">
+                    Order Now
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80" alt="Creative handmade art">
+
+            <div class="product-info">
+                <h3>Creative Crafts</h3>
+                <p>Artistic handmade pieces with a personal touch.</p>
+
+                <button class="btn" onclick="orderProduct('Creative Crafts')">
+                    Order Now
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+
+    <img
+        src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=80"
+        alt="Creative handmade workspace">
+
+    <div>
+        <h2>Behind the Art</h2>
+
+        <p>
+            Welcome to Art by Maryam, where creativity
+            meets craftsmanship.
+        </p>
+
+        <p>
+            Every creation is made with attention to detail,
+            imagination and a passion for handmade art.
+            We believe that handmade gifts carry emotions
+            that ordinary gifts cannot express.
+        </p>
+
+        <a href="#contact" class="btn">Create Something Special</a>
+    </div>
+
+</section>
+
+<!-- CUSTOM ORDERS -->
+<section class="custom" id="contact">
+
+    <h2>Have Something Special in Mind?</h2>
+
+    <p>
+        Tell us your idea and let us turn it into
+        a beautiful handmade creation.
+        Custom orders are always welcome!
+    </p>
+
+    <a href="#" class="btn" onclick="customOrder(); return false;">
+        Place a Custom Order
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h3>Art by Maryam</h3>
+
+    <p>Handmade with creativity, care and love.</p>
+
+    <p>Follow us on Instagram | Connect on WhatsApp</p>
+
+    <p>&copy; <span id="year"></span> Art by Maryam. All Rights Reserved.</p>
+
+</footer>
+
+<a class="whatsapp" id="whatsappLink" href="#" target="_blank">
+    WhatsApp Us
+</a>
+
+<script>
+
+// CHANGE THIS TO YOUR WHATSAPP NUMBER
+// Include country code without + sign
+const whatsappNumber = "923XXXXXXXXX";
+
+function sendWhatsApp(message) {
+    if (!/^92\d{10}$/.test(whatsappNumber)) {
+        alert("Please add your correct WhatsApp number in the website code first.");
+        return;
+    }
+
+    const url = "https://wa.me/" + whatsappNumber +
+                "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+function orderProduct(product) {
+    sendWhatsApp(
+        "Hello Art by Maryam! I am interested in ordering: " + product
+    );
+}
+
+function customOrder() {
+    sendWhatsApp(
+        "Hello Art by Maryam! I would like to discuss a custom order."
+    );
+}
+
+document.getElementById("whatsappLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    sendWhatsApp("Hello! I would like to know more about your products.");
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
